@@ -1,46 +1,48 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link href="style.css" rel="stylesheet">
-        <title>САЙТ ДЛЯ</title>
-    </head>
-    <body>
-        <h1>здесь находится заголовок</h1>
-        <div>
-            <form>
-                <div>
-                    <label for="name">название е</label>
-                    <input id="name">
-                
-                </div>
-
-                <div>
-                    <label for="desc">описание е</label>
-                    <input id="desc">
-                </div>
-
-                <div>
-                    <label for="freq">частота е</label>
-                    <select  id="freq">
-                        <option value="1">кажди ден ь</option>
-                        <option value="1">кажди неделя</option>
-                        <option value="1">кажди месяц</option>
-
-                    </select>
-                </div>
-
-                <div>
-                    <label for="count">количество</label>
-                    <input id="count" type="number">
-                </div>
-
-                <div>
-
-                    
-                </div>
-            </form>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование трекера привычек</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css"> </link>
+</head>
+<body>
+    <div class="container">
+    <h1>Редактирование привычки</h1>
+    <form id="form" >
+         <div class="form-group">
+            <label for="habitName">Название привычки<br>
+            <input type="text" id="habitName" name="habitName" placeholder="Введите название привычки" required></label>
+            <br><br>
+        </div>
+         <div class="form-group">
+            <label for="habitDescription">Описание:</label><br>
+            <textarea id="habitDescription" name="habitDescription" rows="4" placeholder="Опишите вашу привычку"></textarea>
+            <br><br>
+        </div>
+        <div class="form-group">
+            <label for="frequency">Частота выполнения:
+            <select id="frequency" name="frequency" class="">
+                <option value="1">Ежедневно</option>
+                <option value="7">Еженедельно</option>
+                <option value="30">Ежемесячно</option>
+            </select>
+            </label>
+            <br/>
+        </div>
+        <div class="form-group">
+            <label for="period">Количество повторений <br/>
+            <input type="number" id="period" name="period" placeholder="Введите название привычки" required>
+            </label>
+            <br/><br/>
         </div>
         
-    </body>
+        <div class="form-group">
+            Общее количество повторений 
+            <span id="totalCount"></span>
+        </div>
+        <button type="submit">Сохранить изменения</button>
+    </form>
+    </div>
+</body>
 </html>

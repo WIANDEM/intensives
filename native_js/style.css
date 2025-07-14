@@ -1,10 +1,113 @@
-:root{
-    --bg-color: rgb(122, 200,36);
+:root {
+
+  --layout__bg: #f4f4f9;       /* Цвет фона страницы */
+
+  --card__bg: #fff;            /* Цвет фона карточки */
+
+  --button__bg: #28a745;       /* Основной цвет кнопки */
+
+  --button--hovered__bg: #218838; /* Цвет кнопки при наведении */
+
 }
-body{
-    background-color: var(--bg-color);
+body {
+
+  background-color: var(--layout__bg);
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+  justify-content: center;  /* Горизонтальное центрирование */
+
+  align-items: center;     /* Вертикальное центрирование */
+
+  height: 100vh;
+
+}
+.container {
+
+  background-color: var(--card__bg);
+
+  padding: 20px;
+
+  border-radius: 8px;              /* Скругленные углы */
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+
+  width: 100%;
+
+  max-width: 500px;                /* Ограничение максимальной ширины */
+
+}
+h1 {
+
+  text-align: center;  /* Выравнивание по центру */
+
+  color: #333;        /* Темно-серый цвет текста */
+
+}
+.container > form {
+
+  display: flex;
+
+  flex-direction: column;  /* Расположение элементов в колонку */
+
+}
+label {
+
+  margin-top: 10px;
+
+  font-weight: bold;  /* Жирный шрифт */
+
+  color: #555;        /* Серый цвет текста */
+
+}
+input, textarea, select {
+
+  padding: 10px 0px;      /* Отступы сверху/снизу */
+
+  margin-top: 5px;
+
+  border: 1px solid #ccc; /* Серая рамка */
+
+  border-radius: 4px;     /* Скругленные углы */
+
+  font-size: 14px;       /* Размер шрифта */
+
+}
+button[type=submit] {
+
+  margin-top: 20px;
+
+  padding: 10px;
+
+  background-color: var(--button__bg);  /* Используем CSS-переменную */
+
+  color: white;
+
+  border: none;
+
+  border-radius: 4px;
+
+  font-size: 16px;
+
+  cursor: pointer;  /* Курсор-указатель */
+
+}
+button[type=submit]:hover {
+
+  background-color: var(--button--hovered__bg);  /* Изменение цвета при наведении */
+
+}
+.form-group {
+
+  margin-bottom: 15px;  /* Отступ между группами полей */
+
+}
+.form-group input, 
+
+.form-group select, 
+
+.form-group textarea {
+
+  width: 100%;  /* Ширина на всю доступную область */
+
 }
